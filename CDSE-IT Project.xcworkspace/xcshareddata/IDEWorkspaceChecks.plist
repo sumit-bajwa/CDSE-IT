@@ -2,7 +2,36 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+<<<<<<<< HEAD:CDSE-IT Project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
 	<key>IDEDidComputeMac32BitWarning</key>
 	<true/>
+========
+	<key>SchemeUserState</key>
+	<dict>
+		<key>CDSE-IT Project.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>17</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>9529C4032AB2EDDC00623654</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9529C41C2AB2EDDE00623654</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9529C4262AB2EDDE00623654</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+>>>>>>>> 567533e (CDSE IT task):CDSE-IT Project.xcodeproj/xcuserdata/sumit.xcuserdatad/xcschemes/xcschememanagement.plist
 </dict>
 </plist>
