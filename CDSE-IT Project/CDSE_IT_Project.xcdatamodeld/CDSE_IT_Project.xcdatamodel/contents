@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="21G83" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DepartmentEntity" representedClassName="DepartmentEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="deptName" optional="YES" attributeType="String"/>
+        <attribute name="deptNo" optional="YES" attributeType="String"/>
+        <relationship name="toDepartManager" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DepartmentManagerEntity" inverseName="toDepartment" inverseEntity="DepartmentManagerEntity"/>
+        <relationship name="toEmployeeDepart" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="EmployeeDepartmentEntity" inverseName="toDepartment" inverseEntity="EmployeeDepartmentEntity"/>
+    </entity>
+    <entity name="DepartmentManagerEntity" representedClassName="DepartmentManagerEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="deptNo" optional="YES" attributeType="String"/>
+        <attribute name="empNo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="fromDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="toDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="toDepartment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DepartmentEntity" inverseName="toDepartManager" inverseEntity="DepartmentEntity"/>
+        <relationship name="toEmployee" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EmployeeEntity" inverseName="toDepartManger" inverseEntity="EmployeeEntity"/>
+    </entity>
+    <entity name="EmployeeDepartmentEntity" representedClassName="EmployeeDepartmentEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="deptNo" optional="YES" attributeType="String"/>
+        <attribute name="empNo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="fromDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="toDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="toDepartment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DepartmentEntity" inverseName="toEmployeeDepart" inverseEntity="DepartmentEntity"/>
+        <relationship name="toEmployee" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EmployeeEntity" inverseName="toEmployeeDepart" inverseEntity="EmployeeEntity"/>
+    </entity>
+    <entity name="EmployeeEntity" representedClassName="EmployeeEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="birthDate" optional="YES" attributeType="String"/>
+        <attribute name="empNo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="gender" optional="YES" attributeType="String"/>
+        <attribute name="hireDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <relationship name="toDepartManger" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DepartmentManagerEntity" inverseName="toEmployee" inverseEntity="DepartmentManagerEntity"/>
+        <relationship name="toEmployeeDepart" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="EmployeeDepartmentEntity" inverseName="toEmployee" inverseEntity="EmployeeDepartmentEntity"/>
+        <relationship name="toSalary" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SalaryEntity" inverseName="toEmployee" inverseEntity="SalaryEntity"/>
+        <relationship name="toTitle" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TitleEntity" inverseName="toEmployee" inverseEntity="TitleEntity"/>
+    </entity>
+    <entity name="SalaryEntity" representedClassName="SalaryEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="empNo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="fromDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="salary" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="toDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="toEmployee" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EmployeeEntity" inverseName="toSalary" inverseEntity="EmployeeEntity"/>
+    </entity>
+    <entity name="TitleEntity" representedClassName="TitleEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="empNo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="fromDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="toDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="toEmployee" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EmployeeEntity" inverseName="toTitle" inverseEntity="EmployeeEntity"/>
+    </entity>
+</model>

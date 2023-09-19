@@ -1,0 +1,6 @@
+framework module Pods_CDSE_IT_Project_CDSE_IT_ProjectUITests {
+  umbrella header "Pods-CDSE-IT Project-CDSE-IT ProjectUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
