@@ -10,6 +10,7 @@ import Firebase
 import FirebaseStorage
 import CoreData
 
+//This is the new line that i have added in the viewcontroller
 class ViewController: UIViewController {
     
     override func viewDidLoad() {
