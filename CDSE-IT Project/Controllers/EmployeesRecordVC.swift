@@ -21,8 +21,7 @@ class EmployeesRecordVC: UIViewController {
     private let databaseManager = DatabaseManager()
 
     
-    //this code is of the main branch
-    
+    //lets change it and call it code of main branch
     override func viewDidLoad() {
         super.viewDidLoad()
         datePicker.datePickerMode = .date
