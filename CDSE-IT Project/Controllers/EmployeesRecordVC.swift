@@ -20,7 +20,7 @@ class EmployeesRecordVC: UIViewController {
     var totalRecords = 0
     private let databaseManager = DatabaseManager()
 
-    
+    //this code is of the main branch
     override func viewDidLoad() {
         super.viewDidLoad()
         datePicker.datePickerMode = .date
